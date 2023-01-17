@@ -1,21 +1,21 @@
-（第n回）実技試験課題#6 2022-12-22  task_06.java     
-     
-課題：libSVM形式への変換III
+（第n回）実技試験課題#6 2022-12-15  task_06.java     
 
-以下のJavaプログラムを作成せよ（APIの利用）
+課題：libSVM形式への変換II
+
+以下のJavaプログラムを作成せよ
 
 
 準備
 配布したテキストファイル二つをダウンロードして保存する
-IN/No7_UTF8[1].txt
-IN/No8_SJIS[1].txt
+IN/No7_UTF8[1].txt　　たぶん、No6の間違い
+IN/No8_SJIS[1].txt　　たぶん、No7の間違い
 
  - 各行が、学生1名を表している（つもりと想定する）
  - 各行はタブ区切りで、学籍番号 性別 姓名 GPA となっている
  - それぞれ、文字コードがUTF-8とShift-JISになっている
 
 
-(1) 学生一名分を表す新しい抽象クラスを作成し      StudentT6.java
+(1) 学生一名分を表す新しい抽象クラスを作成し      StudentT7.java
     (1-1) 学籍番号 性別 姓名 GPA に対応するprivateメンバー変数をそれぞれ定義せよ
     int studentId, String sex, String name, float gpa
     (1-2) ↑で定義したメンバー変数に代入して初期化するコンストラクタを作成せよ 
@@ -43,9 +43,13 @@ IN/No8_SJIS[1].txt
      ￭特徴量としてGPAと性別を、ラベルとして学科を出力すること
      ￭学科名を自分で数値を定義して数値ラベルに変換する
      ￭LibSVM形式はたとえば 1 1:87 2:0.5 … といった形
+     
+
+ #7では、(3-4)を追加し、UTF-8だけでなくShift-JISに対応できるようするもの。    
+     
 
   (3-4) Shift-JIS版を読み込めるように変更せよ
-      BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file),“Shift-JIS”));
+      BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "Shift-JIS"));
       とすればよい
        InputStreamReader,FileInputStreamはいずれもjava.ioパッケージのクラス
-       
+     

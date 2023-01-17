@@ -1,0 +1,19 @@
+（第n回）実技試験課題#7 2022-12-22  task_07.java     
+     
+課題：libSVM形式への変換III
+以下のJavaプログラムを作成せよ（APIの利用）
+
+準備
+配布したテキストファイル二つをダウンロードして保存する
+IN/No7_UTF8[1].txt　　たぶん、No6の間違い
+IN/No8_SJIS[1].txt　　たぶん、No7の間違い
+
+
+問題の中身は、UTF-8版の#6と同じ。
+#7では、最後に(3-4)を追加し、Shift-JISに対応できるようするもの。    
+
+
+  (3-4) Shift-JIS版を読み込めるように変更せよ
+      BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "Shift-JIS"));
+      とすればよい
+       InputStreamReader,FileInputStreamはいずれもjava.ioパッケージのクラス
